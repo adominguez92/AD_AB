@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class PlayerMovment : MonoBehaviour
 {
-    public Rigidbody rb;
+    public CharacterController cc;
     public float spped = 5f;
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        Vector3 movementInput = Vector3.zero;
+        movementInput.x = Input.GetAxisRaw("Horizontal");
+        movementInput.z = Input.GetAxisRaw("Vertical");
+        Move(movementInput);
     }
 
-    void Move()
+    void Move(Vector3 direction)
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-       
-        Vector3 move = new Vector3(horizontal, rb.velocity.y, vertical);
-        rb.velocity = move.normalized * spped * Time.deltaTime;
-
+        cc.SimpleMove(direction.normalized * spped);
     }
 }
