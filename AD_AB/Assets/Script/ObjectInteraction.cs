@@ -6,9 +6,9 @@ public class ObjectInteraction : MonoBehaviour
 {
     public GameObject objectPoint;
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.name == "Object") 
+        if (other.gameObject.name == "Object")
         {
             Debug.Log("toco");
         }
