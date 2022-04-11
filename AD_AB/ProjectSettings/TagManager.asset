@@ -6,15 +6,16 @@ TagManager:
   tags:
   - Object
   - Ground
+  - Enemigo
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - jugador
   - Water
   - UI
   - Ground
-  - 
+  - Enemigo
   - 
   - 
   - 

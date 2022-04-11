@@ -41,14 +41,14 @@ public class DeteccionJugador_Enemigo : MonoBehaviour
     void Perseguir()
     {
         Vector3 distanciaEntreJugadores = jugador.transform.position - enemigo.transform.position;
-        if (distanciaEntreJugadores.magnitude > 2)
+        if (distanciaEntreJugadores.magnitude > 1)
         {
             enemigo.transform.position = Vector3.MoveTowards(enemigo.transform.position, jugador.transform.position, velocidadEnemigo * Time.deltaTime);
         }
     }
     void Observar()
     {
-        Quaternion rotacionEnemigo = Quaternion.LookRotation(jugador.transform.position - transform.position);
-        enemigo.transform.rotation = Quaternion.Lerp(transform.rotation, rotacionEnemigo, velocidadEnemigo * Time.deltaTime);
+        Quaternion rotacionEnemigo = Quaternion.LookRotation(jugador.transform.position - enemigo.transform.position);
+        enemigo.transform.rotation = Quaternion.Lerp(enemigo.transform.rotation, rotacionEnemigo, velocidadEnemigo * Time.deltaTime);
     }
 }

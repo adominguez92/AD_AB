@@ -57,11 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\AnimateStateControler.cs" />
+    <Compile Include="Assets\Script\Aparicion_Enemigo.cs" />
     <Compile Include="Assets\Script\ObjectInteraction.cs" />
+    <Compile Include="Assets\Script\DeteccionJugador_Enemigo.cs" />
     <Compile Include="Assets\Script\PlayerMovment.cs" />
     <Compile Include="Assets\Script\MouseController.cs" />
-    <Compile Include="Assets\Script\Aparicion_Enemigo.cs" />
-    <Compile Include="Assets\Script\DeteccionJugador_Enemigo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Victorian Study\READ ME.txt" />
