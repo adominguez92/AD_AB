@@ -59,6 +59,7 @@
     <Compile Include="Assets\Script\ObjectInteraction.cs" />
     <Compile Include="Assets\Script\PlayerMovment.cs" />
     <Compile Include="Assets\Script\MouseController.cs" />
+    <Compile Include="Assets\Script\AnimateStateControler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
